@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+}
+
+div.panes {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    perspective: 50vw;
+    width: 100vw;
+    height: 80vw;
+    display: grid;
+    overflow: hidden;
+    justify-self: center;
+}
+
+div.pane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    transition: transform 0.5s ease;
+    opacity: 50%;
+    box-sizing: border-box;
+    border: 20px solid #888;
+    padding: 2em;
+}
+
+#pane1 {
+    background-color: #26a;
+    /* 前面 */
+    transform: rotateY(0deg) translateZ(-50vw);
+}
+
+#pane2 {
+    background-color: #a33;
+    /* 右面 */
+    transform: rotateY(-90deg) translateZ(-50vw);
+}
+
+#pane3 {
+    background-color: #aaa;
+    /* 背面 */
+    transform: rotateY(180deg) translateZ(-50vw);
+}
+
+#pane4 {
+    background-color: #aa2;
+    /* 左面 */
+    transform: rotateY(90deg) translateZ(-50vw);
+}
+
+#pane5 {
+    background-color: lightblue;
+}
+
+#pane6 {
+    background-color: lightyellow;
+}
+
+.buttons {
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 100;
+}
