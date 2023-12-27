@@ -20,7 +20,7 @@ div.pane {
     left: 0;
     width: 100vw;
     height: 100vw;
-    transition: transform 0.5s ease;
+    transition: transform 0.1s ease-out;
     opacity: 50%;
     box-sizing: border-box;
     border: 20px solid #888;
