@@ -32,6 +32,7 @@ div.pane {
     box-sizing: border-box;
     padding: 2em;
     border: 0.5em outset;
+    overflow-y: auto;
 }
 
 div.pane.hidden {
