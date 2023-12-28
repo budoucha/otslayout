@@ -42,8 +42,9 @@ div.pane {
     filter: drop-shadow(0 0 0.1em #0008);
 }
 
-div.pane.hidden {
-    display: none;
+div.pane.back {
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* 前面 */
