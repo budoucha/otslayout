@@ -70,7 +70,9 @@ div.pane {
 .buttons {
     position: fixed;
     width: 100%;
-    top: 10px;
+    top: 1.5em;
+    column-gap: 1em;
+    transform: scale(1.5);
     display: flex;
     flex-direction: row;
     justify-content: center;
