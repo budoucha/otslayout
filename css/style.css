@@ -9,8 +9,7 @@ div.panes-container {
     height: 100vh;
     overflow: hidden;
     display: grid;
-    justify-content: center;
-    align-content: center;
+    place-content: center;
 }
 
 div.panes {
