@@ -128,3 +128,19 @@ div.guide:hover {
 #guideR>span {
     transform: translateX(-25%) rotate(45deg);
 }
+
+.container.fit {
+    width: max-content;
+    height: min-content;
+    display: inline-block;
+}
+
+.container.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5em;
+    justify-items: center;
+    
+}
