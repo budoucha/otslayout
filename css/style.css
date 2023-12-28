@@ -83,6 +83,13 @@ div.pane.back {
     background-color: lightyellow;
 }
 
+.pane>.container {
+    border: inset 0.4em;
+    border-color: inherit;
+    background: #fff4;
+    padding: 0.5em;
+}
+
 div.guide {
     position: fixed;
     top: 50%;
