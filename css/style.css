@@ -30,9 +30,14 @@ div.pane {
     transition: transform 0.1s ease-out;
     opacity: 50%;
     box-sizing: border-box;
-    padding: 2em;
+    padding: 0 2em;
     border: 0.5em outset;
     overflow-y: auto;
+}
+
+.pane>.header {
+    margin-top: 0;
+    text-align: center;
 }
 
 div.pane.hidden {
