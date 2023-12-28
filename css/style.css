@@ -83,7 +83,7 @@ div.pane.back {
     background-color: lightyellow;
 }
 
-.pane>.container {
+.pane .container {
     border: inset 0.4em;
     border-color: inherit;
     background: #fff4;
