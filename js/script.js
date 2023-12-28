@@ -1,5 +1,5 @@
-const rotBtnL = document.querySelector('.rot-btn#rotateL');
-const rotBtnR = document.querySelector('.rot-btn#rotateR');
+const rotBtnL = document.querySelector('.guide#guideL');
+const rotBtnR = document.querySelector('.guide#guideR');
 
 rotBtnL.addEventListener('click', () => {
     const panes = document.querySelectorAll('.pane');
