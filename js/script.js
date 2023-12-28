@@ -9,7 +9,7 @@ rotBtnL.addEventListener('click', () => {
         const translate = Array.from(transform).find(transform => transform instanceof CSSTranslate);
         const currentAngle = rotate ? +rotate.angle.value : 0;
         const translateValue = translate ? `translateZ(${translate.z.value}${translate.z.unit})` : '';
-        const newAngle = currentAngle - 90;
+        const newAngle = (Math.round(currentAngle / 90) - 1) * 90; //連打でずれていくのを防ぐため離散化する
         pane.style.transform = `rotateY(${newAngle}deg) ${translateValue}`;
     });
 })
@@ -22,7 +22,7 @@ rotBtnR.addEventListener('click', () => {
         const translate = Array.from(transform).find(transform => transform instanceof CSSTranslate);
         const currentAngle = rotate ? +rotate.angle.value : 0;
         const translateValue = translate ? `translateZ(${translate.z.value}${translate.z.unit})` : '';
-        const newAngle = currentAngle + 90;
+        const newAngle = (Math.round(currentAngle / 90) + 1) * 90;
         pane.style.transform = `rotateY(${newAngle}deg) ${translateValue}`;
     });
 })
