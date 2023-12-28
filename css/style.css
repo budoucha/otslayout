@@ -37,6 +37,14 @@ div.pane {
     overflow-y: auto;
 }
 
+.pane .container {
+    border: inset 0.4em;
+    border-color: inherit;
+    background: #fff4;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
 .pane>.header {
     margin-top: 0;
     text-align: center;
@@ -85,13 +93,6 @@ div.pane.back {
     background-color: lightyellow;
 }
 
-.pane .container {
-    border: inset 0.4em;
-    border-color: inherit;
-    background: #fff4;
-    padding: 0.5em;
-}
-
 div.guide {
     position: fixed;
     top: 50%;
@@ -106,17 +107,20 @@ div.guide {
     border-radius: 0.5em;
     z-index: 1000;
 }
+
 div.guide:hover {
     opacity: 0.5;
 }
+
 #guideL {
     left: 1em;
 }
+
 #guideR {
     right: 1em;
 }
 
-.guide>span{
+.guide>span {
     width: 1em;
     height: 1em;
     border: 0.25em solid;
@@ -124,9 +128,11 @@ div.guide:hover {
     border-bottom: 0;
     box-sizing: border-box;
 }
+
 #guideL>span {
     transform: translateX(25%) rotate(-135deg);
 }
+
 #guideR>span {
     transform: translateX(-25%) rotate(45deg);
 }
