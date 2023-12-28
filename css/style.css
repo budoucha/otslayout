@@ -34,6 +34,10 @@ div.pane {
     border: 0.5em outset;
 }
 
+div.pane.hidden {
+    display: none;
+}
+
 /* 前面 */
 #pane1 {
     transform: rotateY(0deg) translateZ(-40vw);
