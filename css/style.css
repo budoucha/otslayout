@@ -38,6 +38,8 @@ div.pane {
 .pane>.header {
     margin-top: 0;
     text-align: center;
+    color: #000a;
+    filter: drop-shadow(0 0 0.1em #0008);
 }
 
 div.pane.hidden {
