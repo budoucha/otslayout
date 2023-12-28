@@ -31,7 +31,7 @@ div.pane {
     opacity: 50%;
     box-sizing: border-box;
     padding: 0 2em;
-    border: 0.5em outset;
+    border: 0.8em outset;
     overflow-y: auto;
 }
 
