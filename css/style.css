@@ -137,6 +137,16 @@ div.guide:hover {
     transform: translateX(-25%) rotate(45deg);
 }
 
+a.block {
+    display: inline-block;
+}
+
+a.twi-link {
+    width: min-content;
+    padding: 0.5em;
+}
+
+
 .container.fit {
     width: max-content;
     height: min-content;
@@ -150,5 +160,5 @@ div.guide:hover {
     align-items: center;
     gap: 0.5em;
     justify-items: center;
-    
+
 }
