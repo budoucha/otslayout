@@ -26,3 +26,12 @@ rotBtnR.addEventListener('click', () => {
         pane.style.transform = `rotateY(${newAngle}deg) ${translateValue}`;
     });
 })
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        rotBtnL.click();
+    }
+    if (e.key === 'ArrowRight') {
+        rotBtnR.click();
+    }
+})
