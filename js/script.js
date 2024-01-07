@@ -52,3 +52,26 @@ document.addEventListener('keydown', (e) => {
         rotBtnR.click();
     }
 })
+
+// Add swipe event listeners for left and right flicks
+let startX = 0;
+let endX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    const screenWidth = window.innerWidth;
+    const swipeLength = Math.abs(endX - startX);
+    const minSwipeLength = screenWidth * 0.3; // Minimum swipe length required for the flick
+
+    if (swipeLength >= minSwipeLength) {
+        if (endX < startX) {
+            rotBtnR.click(); // Right flick
+        } else {
+            rotBtnL.click(); // Left flick
+        }
+    }
+});
