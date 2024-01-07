@@ -44,6 +44,10 @@ div.otslayout {
     flex: 1;
 }
 
+.otslayout .pane .main {
+    border-color: inherit;
+}
+
 .otslayout .pane>.header {
     margin-top: 0;
     height: min-content;
