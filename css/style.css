@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-div.panes-container {
+div.otslayout {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -12,7 +12,7 @@ div.panes-container {
     place-content: center;
 }
 
-div.panes {
+.otslayout div.panes {
     position: absolute;
     margin: 0;
     transform: translateX(20vw) translateY(20vh) scale(2);
@@ -22,7 +22,7 @@ div.panes {
     height: 100%;
 }
 
-div.pane {
+.otslayout div.pane {
     position: absolute;
     top: 0;
     width: 80vw;
@@ -38,7 +38,7 @@ div.pane {
     color: #fff;
 }
 
-.pane .container {
+.otslayout .pane .container {
     border: inset 0.4em;
     border-color: inherit;
     background: #fff4;
@@ -48,7 +48,7 @@ div.pane {
     flex: 1;
 }
 
-.pane>.header {
+.otslayout .pane>.header {
     margin-top: 0;
     height: min-content;
     text-align: center;
@@ -56,7 +56,7 @@ div.pane {
     filter: drop-shadow(0 0 0.1em #0008);
 }
 
-.pane>.footer {
+.otslayout .pane>.footer {
     justify-self: end;
     align-self: end;
     height: min-content;
@@ -64,48 +64,48 @@ div.pane {
     color: #fffa;
 }
 
-div.pane.back {
+.otslayout div.pane.back {
     visibility: hidden;
     pointer-events: none;
 }
 
 /* 前面 */
-#pane1 {
+.otslayout #pane1 {
     transform: rotateY(0deg) translateZ(-40vw);
     background-color: #26a;
     border-color: #26a;
 }
 
 /* 右面 */
-#pane2 {
+.otslayout #pane2 {
     transform: rotateY(-90deg) translateZ(-40vw);
     background-color: #933;
     border-color: #933;
 }
 
 /* 背面 */
-#pane3 {
+.otslayout #pane3 {
     transform: rotateY(180deg) translateZ(-40vw);
     background-color: #774;
     border-color: #774;
 }
 
 /* 左面 */
-#pane4 {
+.otslayout #pane4 {
     transform: rotateY(90deg) translateZ(-40vw);
     background-color: #474;
     border-color: #474;
 }
 
-#pane5 {
+.otslayout #pane5 {
     background-color: lightblue;
 }
 
-#pane6 {
+.otslayout #pane6 {
     background-color: lightyellow;
 }
 
-div.guide {
+.otslayout div.guide {
     position: fixed;
     top: 50%;
     background: #ccc;
@@ -120,19 +120,19 @@ div.guide {
     z-index: 1000;
 }
 
-div.guide:hover {
+.otslayout div.guide:hover {
     opacity: 0.5;
 }
 
-#guideL {
+.otslayout #guideL {
     left: 1em;
 }
 
-#guideR {
+.otslayout #guideR {
     right: 1em;
 }
 
-.guide>span {
+.otslayout .guide>span {
     width: 1em;
     height: 1em;
     border: 0.25em solid;
@@ -141,32 +141,32 @@ div.guide:hover {
     box-sizing: border-box;
 }
 
-#guideL>span {
+.otslayout #guideL>span {
     transform: translateX(25%) rotate(-135deg);
 }
 
-#guideR>span {
+.otslayout #guideR>span {
     transform: translateX(-25%) rotate(45deg);
 }
 
-a.block {
+.otslayout a.block {
     display: inline-block;
 }
 
-a.twi-link {
+.otslayout a.twi-link {
     width: min-content;
     padding: 0.5em;
 }
 
 
-.container.container-fit {
+.otslayout .container.container-fit {
     width: min-content;
     height: min-content;
     display: inline-block;
     text-align: center;
 }
 
-.container.container-flex {
+.otslayout .container.container-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
