@@ -1,5 +1,24 @@
-const rotBtnL = document.querySelector('.guide#guideL');
-const rotBtnR = document.querySelector('.guide#guideR');
+const otsLayout = () => {
+    const otsRootElement = document.querySelector('div.otslayout>.content');
+    let disabled = true;
+    otsRootElement.classList.add('disabled');
+
+    // enable/disable by s key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 's') {
+            disabled = !disabled;
+            otsRootElement.classList.toggle('disabled', disabled);
+        }
+    });
+    // or with a button
+    const mainSwitchElement = document.querySelector('div.otslayout>.main-switch');
+    mainSwitchElement.addEventListener('click', () => {
+        disabled = !disabled;
+        otsRootElement.classList.toggle('disabled', disabled);
+    });
+
+const rotBtnL = otsRootElement.querySelector('.guide#guideL');
+const rotBtnR = otsRootElement.querySelector('.guide#guideR');
 
 const getAngleAndTranslate = (pane) => {
     const transform = pane.computedStyleMap().get('transform');
@@ -75,3 +94,6 @@ document.addEventListener('touchend', (e) => {
         }
     }
 });
+}
+
+otsLayout();
