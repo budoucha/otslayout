@@ -17,9 +17,7 @@ const otsLayout = () => {
         otsRootElement.classList.toggle('disabled', disabled);
     });
 
-    const rotBtnL = otsRootElement.querySelector('.guide#guideL');
-    const rotBtnR = otsRootElement.querySelector('.guide#guideR');
-
+    // rotate pane
     const getAngleAndTranslate = (pane) => {
         const transform = pane.computedStyleMap().get('transform');
         const rotate = Array.from(transform).find(transform => transform instanceof CSSRotate);
@@ -47,19 +45,16 @@ const otsLayout = () => {
         movePane(pane, angleValue, translateValue);
     })
 
-    rotBtnL.addEventListener('click', () => {
-        panes.forEach((pane) => {
-            const { angleValue, translateValue } = getAngleAndTranslate(pane);
-            const newAngle = ((Math.round(angleValue / 90) - 1) * 90); //連打でずれていくのを防ぐため離散化する
-            movePane(pane, newAngle, translateValue);
-        });
-    })
+    // rotate pane by button
+    const rotBtns = otsRootElement.querySelectorAll('.guides .guide');
 
-    rotBtnR.addEventListener('click', () => {
-        panes.forEach((pane) => {
-            const { angleValue, translateValue } = getAngleAndTranslate(pane);
-            const newAngle = ((Math.round(angleValue / 90) + 1) * 90);
-            movePane(pane, newAngle, translateValue);
+    rotBtns.forEach((rotBtn, index) => {
+        rotBtn.addEventListener('click', () => {
+            panes.forEach((pane) => {
+                const { angleValue, translateValue } = getAngleAndTranslate(pane);
+                const newAngle = ((Math.round(angleValue / 90) + [-1, 1][index]) * 90); //連打でずれていくのを防ぐため離散化する
+                movePane(pane, newAngle, translateValue);
+            });
         });
     })
 
