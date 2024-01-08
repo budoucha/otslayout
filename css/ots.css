@@ -1,3 +1,4 @@
+/* 基本 */
 div.otslayout {
     position: relative;
     width: 100vw;
@@ -23,6 +24,10 @@ div.otslayout {
     width: 80vw;
     height: 80vh;
     display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
     grid-template-rows: min-content 1fr min-content;
     justify-items: stretch;
     transition: transform 0.1s ease-out;
@@ -33,6 +38,19 @@ div.otslayout {
     color: #fff;
 }
 
+.otslayout .pane>div.header {
+    grid-area: header;
+}
+
+.otslayout .pane>div.main {
+    grid-area: main;
+    border-color: inherit;
+}
+
+.otslayout .pane>div.footer {
+    grid-area: footer;
+}
+
 .otslayout .pane .ots-item {
     border: inset 0.4em;
     border-color: inherit;
@@ -41,10 +59,6 @@ div.otslayout {
     padding: 0.5em 1em;
     overflow-y: auto;
     flex: 1;
-}
-
-.otslayout .pane .main {
-    border-color: inherit;
 }
 
 .otslayout .pane>.header {
