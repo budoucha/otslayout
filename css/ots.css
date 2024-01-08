@@ -21,7 +21,7 @@ div.otslayout .content {
 
 div.otslayout .content.disabled {
     pointer-events: none;
-    opacity: 0%;
+    opacity: 0;
     transform: rotateX(90deg);
 }
 
@@ -48,7 +48,7 @@ div.otslayout .content.disabled {
     grid-template-rows: min-content 1fr min-content;
     justify-items: stretch;
     transition: transform 0.1s ease-out;
-    opacity: 60%;
+    opacity: 0.8;
     box-sizing: border-box;
     padding: 0 2em;
     border: 0.8em outset;
