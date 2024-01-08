@@ -14,10 +14,15 @@ div.otslayout .content {
     overflow: hidden;
     display: grid;
     place-content: center;
+    opacity: 1;
+    transform-origin: bottom;
+    transition: opacity 0.1s ease, transform 0.08s ease-out;
 }
 
 div.otslayout .content.disabled {
-    display: none;
+    pointer-events: none;
+    opacity: 0%;
+    transform: rotateX(90deg);
 }
 
 .otslayout .panes {
