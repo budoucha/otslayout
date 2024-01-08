@@ -1,4 +1,4 @@
-/* 基本 */
+/* Basics */
 div.otslayout {
     position: relative;
     width: 100vw;
@@ -82,42 +82,45 @@ div.otslayout {
     pointer-events: none;
 }
 
-/* 前面 */
+/* Front */
 .otslayout div.pane1 {
     transform: rotateY(0deg) translateZ(-40vw);
     background-color: #26a;
     border-color: #26a;
 }
 
-/* 右面 */
+/* Right */
 .otslayout .pane2 {
     transform: rotateY(-90deg) translateZ(-40vw);
     background-color: #933;
     border-color: #933;
 }
 
-/* 背面 */
+/* Back */
 .otslayout .pane3 {
     transform: rotateY(180deg) translateZ(-40vw);
     background-color: #774;
     border-color: #774;
 }
 
-/* 左面 */
+/* Left */
 .otslayout .pane4 {
     transform: rotateY(90deg) translateZ(-40vw);
     background-color: #474;
     border-color: #474;
 }
 
+/* Top(To be implemented) */
 .otslayout .pane5 {
     background-color: lightblue;
 }
 
+/* Bottom(To be implemented) */
 .otslayout .pane6 {
     background-color: lightyellow;
 }
 
+/* Right/Left Buttons */
 .otslayout div.guide {
     position: fixed;
     top: 50%;
@@ -162,9 +165,6 @@ div.otslayout {
     transform: translateX(-25%) rotate(45deg);
 }
 
-.otslayout a.block {
-    display: inline-block;
-}
 
 
 /* generic elements */
@@ -180,6 +180,9 @@ div.otslayout {
     margin-block: 1em;
 }
 
+.otslayout a.display-block {
+    display: inline-block;
+}
 
 
 /* 追加機能 */
