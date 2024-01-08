@@ -1,11 +1,23 @@
 /* Basics */
-div.otslayout {
+div.otslayout button.main-switch {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1000;
+    padding: 1em 2em;
+}
+
+div.otslayout .content {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     display: grid;
     place-content: center;
+}
+
+div.otslayout .content.disabled {
+    display: none;
 }
 
 .otslayout .panes {
