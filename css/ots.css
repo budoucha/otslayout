@@ -171,12 +171,26 @@ div.otslayout {
     padding: 0.5em;
 }
 
+/* generic elements */
+.otslayout h1 {
+    margin-block: 0.334em;
+}
+
+.otslayout h2 {
+    margin-block: 0.667em;
+}
+
 .otslayout h3 {
-    align-self: center;
+    margin-block: 1em;
 }
 
 
-/* 追加 */
+
+/* 追加機能 */
+.otslayout .centered {
+    display: grid;
+    place-content: center;
+}
 
 .otslayout .ots-item.ots-item-flex-row {
     display: flex;
