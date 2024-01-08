@@ -17,7 +17,6 @@ const otsLayout = () => {
         otsRootElement.classList.toggle('disabled', disabled);
     });
 
-    // rotate pane
     const getAngleAndTranslate = (pane) => {
         const transform = pane.computedStyleMap().get('transform');
         const rotate = Array.from(transform).find(transform => transform instanceof CSSRotate);
@@ -29,6 +28,7 @@ const otsLayout = () => {
 
     const movePane = (pane, angle, translateValue) => {
         pane.style.transform = `rotateY(${angle}deg) ${translateValue}`;
+        //背面パネルを非表示にする(正面パネルの邪魔にならないようにする)
         if (angle % 360 === 180) {
             pane.classList.add("back");
         }
@@ -37,9 +37,8 @@ const otsLayout = () => {
         }
     }
 
+    //初期化
     const panes = document.querySelectorAll('.pane');
-
-    /* 背面パネルを非表示にする(正面パネルの邪魔にならないようにする) */
     panes.forEach((pane) => {
         const { angleValue, translateValue } = getAngleAndTranslate(pane);
         movePane(pane, angleValue, translateValue);
@@ -58,6 +57,7 @@ const otsLayout = () => {
         });
     })
 
+    // or by arrow key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
             rotBtns[0].click();
@@ -67,7 +67,7 @@ const otsLayout = () => {
         }
     })
 
-    // Add swipe event listeners for left and right flicks
+    // or by horizontal flicks
     let startX = 0;
     let endX = 0;
 
