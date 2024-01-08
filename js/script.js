@@ -60,10 +60,10 @@ const otsLayout = () => {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            rotBtnL.click();
+            rotBtns[0].click();
         }
         if (e.key === 'ArrowRight') {
-            rotBtnR.click();
+            rotBtns[1].click();
         }
     })
 
