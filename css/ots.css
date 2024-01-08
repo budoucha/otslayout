@@ -33,7 +33,7 @@ div.otslayout {
     color: #fff;
 }
 
-.otslayout .pane .container {
+.otslayout .pane .ots-item {
     border: inset 0.4em;
     border-color: inherit;
     background: #fff4;
@@ -162,7 +162,9 @@ div.otslayout {
 }
 
 
-.otslayout .container.container-flex-row {
+/* 追加 */
+
+.otslayout .ots-item.ots-item-flex-row {
     display: flex;
     flex-direction: row;
     align-items: stretch;
