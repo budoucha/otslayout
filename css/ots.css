@@ -166,10 +166,6 @@ div.otslayout {
     display: inline-block;
 }
 
-.otslayout a.twi-link {
-    width: min-content;
-    padding: 0.5em;
-}
 
 /* generic elements */
 .otslayout h1 {
