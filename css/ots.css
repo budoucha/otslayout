@@ -197,10 +197,6 @@ div.otslayout .content.disabled {
     margin-block: 1em;
 }
 
-.otslayout a.display-block {
-    display: block;
-}
-
 
 /* 追加機能 */
 .otslayout .centered {
