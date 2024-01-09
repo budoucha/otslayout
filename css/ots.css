@@ -198,7 +198,7 @@ div.otslayout .content.disabled {
 }
 
 .otslayout a.display-block {
-    display: inline-block;
+    display: block;
 }
 
 
